@@ -18,7 +18,7 @@ function getSkinShade() {
      var formdata = new FormData();
 
         var myHeaders = new Headers();
-        myHeaders.append("x-api-key", "put your api key here");
+        myHeaders.append("x-api-key", "Add Your ROBOMUA API KEY  here");
 
         var formdata = new FormData();
         
@@ -35,15 +35,17 @@ function getSkinShade() {
         .then(response => response.text())
         .then(result => {
           console.log(result);
+          document.getElementById("demo").innerHTML = "Your Skin Shade Result" + " " +  result;
           // console.log(result.skinShade);
           // console.log(result.toneRange);
-          alert("Your Skin Shade is:" + result)
+          alert("Your Skin Shade is:" + result);
+          
 
         })
         .catch(error => console.log('error', error));
         // document.getElemenetById("h1").innerHtml = result
         // document.getElementById("h1").innerHTML = "hello";
-        document.getElementById("demo").innerHTML = "Your Skin Shade Result" +" " +  result;
+        // document.getElementById("demo").innerHTML = "Your Skin Shade Result" + " " +  result;
     
   }
 
